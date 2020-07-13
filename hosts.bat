@@ -22,7 +22,7 @@ goto check_Permissions
 cd %SystemRoot%\System32\drivers\etc
 cls
 
-echo. >> hosts
+echo: >> hosts
 echo # GitHub: https://github.com/Bean6754 >> hosts
 echo 0.0.0.0 bing.com >> hosts
 echo 0.0.0.0 microsoft.com >> hosts
@@ -30,6 +30,6 @@ echo 0.0.0.0 onedrive.com >> hosts
 echo 0.0.0.0 onedrive.live.com >> hosts
 echo 0.0.0.0 microsoftstore.com >> hosts
 echo # end >> hosts
-echo. >> hosts
+echo: >> hosts
 
 exit
