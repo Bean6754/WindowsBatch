@@ -74,9 +74,9 @@ IF "%input%"=="exit" (
 ) ELSE IF "%input%"=="us" (
   goto :us
 ) ELSE (
-  echo.
+  echo:
   echo Error 1: '%input%' is not a recognised command.
-  echo.
+  echo:
   goto :retry
 )
 
@@ -93,7 +93,7 @@ echo 'reset' = Reset Windows NTP servers to defaults.
 echo 'servers' = View NTP servers.
 echo 'sync' = Sync local time with NTP server time (connects to set NTP servers).
 echo 'time' = View localtime.
-echo.
+echo:
 goto :retry
 
 :clear
@@ -102,12 +102,12 @@ goto :retry
 
 :cmd
 cmd
-echo.
+echo:
 goto :retry
 
 :ip
 ipconfig /all
-echo.
+echo:
 goto :retry
 
 :ls
@@ -117,80 +117,80 @@ echo NO = Norge/Noreg.
 echo SE = Sverige.
 echo UK = United Kingdom.
 echo US = United States.
-echo.
+echo:
 goto :retry
 
 :motd
 echo Available countries: 'de', 'fr', 'uk', 'us', 'no', 'se'.
 echo Or 'help' for information on many more commands.
 echo What country are you from?
-echo.
+echo:
 goto :retry
 
 :netsh
 netsh
-echo.
+echo:
 goto :retry
 
 :powershell
 powershell
-echo.
+echo:
 goto :retry
 
 :reset
 w32tm /config /update /manualpeerlist:"time.windows.com time.nist.gov"
 echo Reset Windows NTP servers to the default servers.
-echo.
+echo:
 goto :retry
 
 :servers
 w32tm /query /peers
-echo.
+echo:
 goto :retry
 
 :sync
 w32tm /resync
-echo.
+echo:
 goto :retry
 
 :time
 time /T
 cscript /nologo %temp%\epoch.vbs
-echo.
+echo:
 goto :retry
 
 :de
 w32tm /config /update /manualpeerlist:"0.de.pool.ntp.org 1.de.pool.ntp.org 2.de.pool.ntp.org 3.de.pool.ntp.org"
 echo Done!
-echo.
+echo:
 goto :retry
 
 :fr
 w32tm /config /update /manualpeerlist:"0.fr.pool.ntp.org 1.fr.pool.ntp.org 2.fr.pool.ntp.org 3.fr.pool.ntp.org"
 echo Done!
-echo.
+echo:
 goto :retry
 
 :no
 w32tm /config /update /manualpeerlist:"0.no.pool.ntp.org 1.no.pool.ntp.org 2.no.pool.ntp.org 3.no.pool.ntp.org"
 echo Done!
-echo.
+echo:
 goto :retry
 
 :se
 w32tm /config /update /manualpeerlist:"0.se.pool.ntp.org 1.se.pool.ntp.org 2.se.pool.ntp.org 3.se.pool.ntp.org"
 echo Done!
-echo.
+echo:
 goto :retry
 
 :uk
 w32tm /config /update /manualpeerlist:"0.uk.pool.ntp.org 1.uk.pool.ntp.org 2.uk.pool.ntp.org 3.uk.pool.ntp.org"
 echo Done!
-echo.
+echo:
 goto :retry
 
 :us
 w32tm /config /update /manualpeerlist:"0.us.pool.ntp.org 1.us.pool.ntp.org 2.us.pool.ntp.org 3.us.pool.ntp.org"
 echo Done!
-echo.
+echo:
 goto :retry
