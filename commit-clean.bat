@@ -32,7 +32,7 @@ echo 'cmd' = Launch CMD.
 echo 'exit' = Exit application.
 echo 'help' = View more commands.
 echo 'repository name' = Clean repo commits.
-echo.
+echo:
 goto :retry
 
 :clear
@@ -41,5 +41,5 @@ goto :retry
 
 :cmd
 cmd
-echo.
+echo:
 goto :retry
