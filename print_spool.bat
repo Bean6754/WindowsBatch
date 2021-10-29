@@ -27,6 +27,7 @@ net stop spoolsv
 pushd C:\Windows\System32\spool\PRINTERS
 del * . * /F /S /Q
 popd
+net start spoolsv
 
 pause
 exit
