@@ -24,9 +24,7 @@ echo.
 REM Program.
 cd /d %SYSTEMDRIVE%\Windows\System32
 net stop spoolsv
-pushd C:\Windows\System32\spool\PRINTERS
-del * . * /F /S /Q
-popd
+del C:\Windows\System32\spool\PRINTERS\*.* /F /S /Q
 net start spoolsv
 
 pause
